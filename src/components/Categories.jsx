@@ -3,8 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import CategoryItem from './CategoryItem'
 import AddSubCategory from './AddSubCategory'
 import { addCategorySync, addSubCategory, deleteCategory, editCategoryFunction } from '../redux/action' 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faEllipsis } from '@fortawesome/free-solid-svg-icons'
+import { FaPlus, FaMinus,FaPlusSquare, FaMinusSquare, FaTrash, FaRegEdit } from "react-icons/fa";
 
 const Categories = () => {
 
@@ -97,7 +96,7 @@ const Categories = () => {
      <div className="col">
      </div>
     <div className="col">
-    <button  onClick={() => setExpandAll(!expandAll)} className="btn btn-primary">{expandAll ? 'Collapse All' : 'Expand All'}</button>
+    <button  onClick={() => setExpandAll(!expandAll)} className="btn btn-primary">{expandAll ? <FaMinusSquare/> : <FaPlusSquare />}</button>
     </div>
      <div className="col">
     <button  onClick={saveHandler} className="btn btn-primary">Save to local</button>
@@ -134,7 +133,7 @@ const Categories = () => {
         )}
         </div>
         <div className="col">
-          <button id={index} onClick={() => {showAddSubCategory(index,item)}} className="btn btn-primary">{expand && indexNumber === index? 'Collapse' : 'Expand'}</button>
+          <button id={index} onClick={() => {showAddSubCategory(index,item)}} className="btn btn-primary">{expand && indexNumber === index? <FaMinus/> : <FaPlus />}</button>
           {indexNumber === index && expand && (
           <div className="row" style={{margin: '1em 0'}}>
             <input type='text' value={newSubCategory} placeholder='New Sub Category' onChange={(e) => setNewSubCategory(e.target.value)} />
@@ -143,10 +142,10 @@ const Categories = () => {
           )}
         </div>
         <div className="col">
-          <button id={index} onClick={() => {deleteCategoryHandler(index,item)}} className="btn btn-primary">Delete Category</button>
+          <button id={index} onClick={() => {deleteCategoryHandler(index,item)}} className="btn btn-primary"><FaTrash /></button>
         </div>
          <div className="col">
-          <button id={index} onClick={() => {showEditCategory(index,item)}} className="btn btn-primary">Edit Category</button>
+          <button id={index} onClick={() => {showEditCategory(index,item)}} className="btn btn-primary"><FaRegEdit/></button>
            {editIndexNumber === index && (
           <div className="row" style={{margin: '1em 0'}}>
             <input placeholder='Edited Category Name' type='text' value={editCategory} onChange={(e) => setEditCategory(e.target.value)} />
