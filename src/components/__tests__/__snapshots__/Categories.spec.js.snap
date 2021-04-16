@@ -2,39 +2,29 @@
 
 exports[`Categories Component should render with given state from Redux store 1`] = `
 <div
-  className="container"
+  class="container"
 >
   <h1>
     3 Categories Present
   </h1>
   <div
-    className="row"
-    style={
-      Object {
-        "marginBottom": "1rem",
-      }
-    }
+    class="row"
+    style="margin-bottom: 1rem;"
   >
     <div
-      className="col"
+      class="col"
     />
     <div
-      className="col"
+      class="col"
     >
       <button
-        className="btn btn-primary"
-        onClick={[Function]}
+        class="btn btn-primary"
       >
         <svg
           fill="currentColor"
           height="1em"
           stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
+          stroke-width="0"
           viewBox="0 0 448 512"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -46,50 +36,39 @@ exports[`Categories Component should render with given state from Redux store 1`
       </button>
     </div>
     <div
-      className="col"
+      class="col"
     >
       <button
-        className="btn btn-primary"
-        onClick={[Function]}
+        class="btn btn-primary"
       >
         Save to local
       </button>
     </div>
     <div
-      className="col"
+      class="col"
     />
   </div>
   <div
-    className="row"
-    style={
-      Object {
-        "marginBottom": "1em",
-      }
-    }
+    class="row"
+    style="margin-bottom: 1em;"
   >
     <div
-      className="col"
+      class="col"
     >
       4 Wheelers
     </div>
     <div
-      className="col"
+      class="col"
     >
       <button
-        className="btn btn-primary"
-        id={0}
-        onClick={[Function]}
+        class="btn btn-primary"
+        id="0"
       >
         <svg
           fill="currentColor"
           height="1em"
           stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
+          stroke-width="0"
           viewBox="0 0 448 512"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -101,23 +80,18 @@ exports[`Categories Component should render with given state from Redux store 1`
       </button>
     </div>
     <div
-      className="col"
+      class="col"
     >
       <button
-        className="btn btn-primary"
-        id={0}
-        onClick={[Function]}
+        class="btn btn-primary"
+        data-testid="deleteButton-0"
+        id="0"
       >
         <svg
           fill="currentColor"
           height="1em"
           stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
+          stroke-width="0"
           viewBox="0 0 448 512"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -129,23 +103,17 @@ exports[`Categories Component should render with given state from Redux store 1`
       </button>
     </div>
     <div
-      className="col"
+      class="col"
     >
       <button
-        className="btn btn-primary"
-        id={0}
-        onClick={[Function]}
+        class="btn btn-primary"
+        id="0"
       >
         <svg
           fill="currentColor"
           height="1em"
           stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
+          stroke-width="0"
           viewBox="0 0 576 512"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -158,36 +126,26 @@ exports[`Categories Component should render with given state from Redux store 1`
     </div>
   </div>
   <div
-    className="row"
-    style={
-      Object {
-        "marginBottom": "1em",
-      }
-    }
+    class="row"
+    style="margin-bottom: 1em;"
   >
     <div
-      className="col"
+      class="col"
     >
       2 wheeleres
     </div>
     <div
-      className="col"
+      class="col"
     >
       <button
-        className="btn btn-primary"
-        id={1}
-        onClick={[Function]}
+        class="btn btn-primary"
+        id="1"
       >
         <svg
           fill="currentColor"
           height="1em"
           stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
+          stroke-width="0"
           viewBox="0 0 448 512"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -199,23 +157,18 @@ exports[`Categories Component should render with given state from Redux store 1`
       </button>
     </div>
     <div
-      className="col"
+      class="col"
     >
       <button
-        className="btn btn-primary"
-        id={1}
-        onClick={[Function]}
+        class="btn btn-primary"
+        data-testid="deleteButton-1"
+        id="1"
       >
         <svg
           fill="currentColor"
           height="1em"
           stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
+          stroke-width="0"
           viewBox="0 0 448 512"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -227,23 +180,17 @@ exports[`Categories Component should render with given state from Redux store 1`
       </button>
     </div>
     <div
-      className="col"
+      class="col"
     >
       <button
-        className="btn btn-primary"
-        id={1}
-        onClick={[Function]}
+        class="btn btn-primary"
+        id="1"
       >
         <svg
           fill="currentColor"
           height="1em"
           stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
+          stroke-width="0"
           viewBox="0 0 576 512"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -256,36 +203,26 @@ exports[`Categories Component should render with given state from Redux store 1`
     </div>
   </div>
   <div
-    className="row"
-    style={
-      Object {
-        "marginBottom": "1em",
-      }
-    }
+    class="row"
+    style="margin-bottom: 1em;"
   >
     <div
-      className="col"
+      class="col"
     >
       Electronics
     </div>
     <div
-      className="col"
+      class="col"
     >
       <button
-        className="btn btn-primary"
-        id={2}
-        onClick={[Function]}
+        class="btn btn-primary"
+        id="2"
       >
         <svg
           fill="currentColor"
           height="1em"
           stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
+          stroke-width="0"
           viewBox="0 0 448 512"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -297,23 +234,18 @@ exports[`Categories Component should render with given state from Redux store 1`
       </button>
     </div>
     <div
-      className="col"
+      class="col"
     >
       <button
-        className="btn btn-primary"
-        id={2}
-        onClick={[Function]}
+        class="btn btn-primary"
+        data-testid="deleteButton-2"
+        id="2"
       >
         <svg
           fill="currentColor"
           height="1em"
           stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
+          stroke-width="0"
           viewBox="0 0 448 512"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -325,23 +257,17 @@ exports[`Categories Component should render with given state from Redux store 1`
       </button>
     </div>
     <div
-      className="col"
+      class="col"
     >
       <button
-        className="btn btn-primary"
-        id={2}
-        onClick={[Function]}
+        class="btn btn-primary"
+        id="2"
       >
         <svg
           fill="currentColor"
           height="1em"
           stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
+          stroke-width="0"
           viewBox="0 0 576 512"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -354,24 +280,23 @@ exports[`Categories Component should render with given state from Redux store 1`
     </div>
   </div>
   <div
-    className="row"
+    class="row"
   >
     <div
-      className="col"
+      class="col"
     >
       <input
-        onChange={[Function]}
         placeholder="New Category"
         type="text"
         value=""
       />
     </div>
     <div
-      className="col"
+      class="col"
     >
       <button
-        className="btn btn-primary"
-        onClick={[Function]}
+        class="btn btn-primary"
+        data-testid="addCategoryButton"
       >
         Add Category
       </button>
