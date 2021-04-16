@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useSelector, useDispatch } from "react-redux";
 import CategoryItem from './CategoryItem'
 import AddSubCategory from './AddSubCategory'
-import { addCategory, addSubCategory, deleteCategory, editCategoryFunction } from '../redux/action' 
+import { addCategorySync, addSubCategory, deleteCategory, editCategoryFunction } from '../redux/action' 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faEllipsis } from '@fortawesome/free-solid-svg-icons'
 
@@ -29,7 +29,7 @@ const Categories = () => {
       subCategory: []
     }
     console.log(payload)
-    dispatch(addCategory(payload))
+    dispatch(addCategorySync(payload))
     setNewCategory('')
   }
 
@@ -85,6 +85,10 @@ const Categories = () => {
     setEditCategory('')
   }
 
+  const saveHandler = () => {
+    localStorage.setItem('state',JSON.stringify(state))
+  }
+
   
   return(
     <div className="container">
@@ -94,6 +98,11 @@ const Categories = () => {
      </div>
     <div className="col">
     <button  onClick={() => setExpandAll(!expandAll)} className="btn btn-primary">{expandAll ? 'Collapse All' : 'Expand All'}</button>
+    </div>
+     <div className="col">
+    <button  onClick={saveHandler} className="btn btn-primary">Save to local</button>
+    </div>
+     <div className="col">
     </div>
     </div>
     {state.map((item,index)=> {

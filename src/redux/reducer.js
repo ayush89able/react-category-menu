@@ -1,4 +1,5 @@
-const initialState = [
+let initialState;
+initialState = [
   {
     id: 1,
     value: "4 Wheelers",
@@ -32,6 +33,11 @@ const initialState = [
     subCategory: []
   }
 ];
+console.log(localStorage.getItem("state"));
+if (localStorage.getItem("state") != null) {
+  initialState = JSON.parse(localStorage.getItem("state"));
+}
+
 import * as actionTypes from "./actionTypes";
 
 function catagories(state = initialState, action) {

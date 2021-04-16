@@ -4,6 +4,14 @@ export function addCategory(payload) {
   return { type: actionTypes.ADD_CATEGORY, payload };
 }
 
+export function addCategorySync(payload) {
+  return dispatch => {
+    setTimeout(() => {
+      dispatch(addCategory(payload));
+    }, 5000);
+  };
+}
+
 export function addSubCategory(payload, index) {
   return { type: actionTypes.ADD_SUBCATEGORY, payload, index };
 }
