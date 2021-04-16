@@ -131,7 +131,7 @@ const Categories = () => {
               )}
             </div>
             <div className="col">
-              <button id={index} onClick={() => { showAddSubCategory(index, item) }} className="btn btn-primary">{expand && indexNumber === index ? <FaMinus /> : <FaPlus />}</button>
+              <button id={index} data-testid={`addSubCategoryOpenButton-${index}`} onClick={() => { showAddSubCategory(index, item) }} className="btn btn-primary">{expand && indexNumber === index ? <FaMinus /> : <FaPlus />}</button>
               {indexNumber === index && expand && (
                 <div className="row" style={{ margin: '1em 0' }}>
                   <input type='text' value={newSubCategory} data-testid={`addSubCategoryInput-${index}`} placeholder='New Sub Category' onChange={(e) => setNewSubCategory(e.target.value)} />
@@ -143,7 +143,7 @@ const Categories = () => {
               <button id={index} data-testid={`deleteButton-${index}`} onClick={() => { deleteCategoryHandler(index, item) }} className="btn btn-primary"><FaTrash /></button>
             </div>
             <div className="col">
-              <button id={index} onClick={() => { showEditCategory(index, item) }} className="btn btn-primary"><FaRegEdit /></button>
+              <button id={index} data-testid={`editCategoryOpenButton-${index}`} onClick={() => { showEditCategory(index, item) }} className="btn btn-primary"><FaRegEdit /></button>
               {editIndexNumber === index && (
                 <div className="row" style={{ margin: '1em 0' }}>
                   <input placeholder='Edited Category Name' data-testid={`editCategoryInput-${index}`} type='text' value={editCategory} onChange={(e) => setEditCategory(e.target.value)} />

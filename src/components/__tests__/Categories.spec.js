@@ -72,11 +72,13 @@ describe('Categories Component', () => {
     });
 
     it('should dispatch an action on add sub category button click', () => {
+        userEvent.click(screen.getByTestId('addSubCategoryOpenButton-0'))
         userEvent.click(screen.getByTestId('addSubCategoryButton-0'))
         expect(store.dispatch).toHaveBeenCalledTimes(1);
     });
 
     it('should dispatch an action on edit category button click', () => {
+        userEvent.click(screen.getByTestId('editCategoryOpenButton-0'))
         userEvent.click(screen.getByTestId('editCategoryButton-0'))
         expect(store.dispatch).toHaveBeenCalledTimes(1);
     });

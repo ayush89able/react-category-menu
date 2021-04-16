@@ -62,6 +62,7 @@ exports[`Categories Component should render with given state from Redux store 1`
     >
       <button
         class="btn btn-primary"
+        data-testid="addSubCategoryOpenButton-0"
         id="0"
       >
         <svg
@@ -107,6 +108,7 @@ exports[`Categories Component should render with given state from Redux store 1`
     >
       <button
         class="btn btn-primary"
+        data-testid="editCategoryOpenButton-0"
         id="0"
       >
         <svg
@@ -139,6 +141,7 @@ exports[`Categories Component should render with given state from Redux store 1`
     >
       <button
         class="btn btn-primary"
+        data-testid="addSubCategoryOpenButton-1"
         id="1"
       >
         <svg
@@ -184,6 +187,7 @@ exports[`Categories Component should render with given state from Redux store 1`
     >
       <button
         class="btn btn-primary"
+        data-testid="editCategoryOpenButton-1"
         id="1"
       >
         <svg
@@ -216,6 +220,7 @@ exports[`Categories Component should render with given state from Redux store 1`
     >
       <button
         class="btn btn-primary"
+        data-testid="addSubCategoryOpenButton-2"
         id="2"
       >
         <svg
@@ -261,6 +266,7 @@ exports[`Categories Component should render with given state from Redux store 1`
     >
       <button
         class="btn btn-primary"
+        data-testid="editCategoryOpenButton-2"
         id="2"
       >
         <svg
