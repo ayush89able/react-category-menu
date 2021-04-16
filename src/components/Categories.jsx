@@ -94,10 +94,10 @@ const Categories = () => {
         <div className="col">
         </div>
         <div className="col">
-          <button onClick={() => setExpandAll(!expandAll)} className="btn btn-primary">{expandAll ? <FaMinusSquare /> : <FaPlusSquare />}</button>
+          <button onClick={() => setExpandAll(!expandAll)} data-testid='expandAllButton' className="btn btn-primary">{expandAll ? <FaMinusSquare /> : <FaPlusSquare />}</button>
         </div>
         <div className="col">
-          <button onClick={saveHandler} className="btn btn-primary">Save to local</button>
+          <button onClick={saveHandler} data-testid='saveToLocalButton' className="btn btn-primary">Save to local</button>
         </div>
         <div className="col">
         </div>

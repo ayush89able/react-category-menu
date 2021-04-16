@@ -93,5 +93,16 @@ describe('Categories Component', () => {
         expect(store.dispatch).toHaveBeenCalledTimes(1);
     });
 
+    it('should dispatch an action on saveToLocalButton button click', () => {
+        userEvent.click(screen.getByTestId('saveToLocalButton'))
+        expect(component.firstChild).toMatchSnapshot();
+    });
+
+    it('should dispatch an action on expandAllButton button click', () => {
+        userEvent.click(screen.getByTestId('expandAllButton'))
+        expect(component.firstChild).toMatchSnapshot();
+    });
+
+
 
 })
