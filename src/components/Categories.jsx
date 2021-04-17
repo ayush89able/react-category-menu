@@ -89,7 +89,7 @@ const Categories = () => {
 
   return (
     <div className="container">
-      <h1>{`${state.length} Categories Present`}</h1>
+      <h1 data-testid='categoriesNumber'>{`${state.length} Categories Present`}</h1>
       <div className="row" style={{ marginBottom: '1rem' }}>
         <div className="col">
         </div>
@@ -156,7 +156,7 @@ const Categories = () => {
       })}
       <div className="row">
         <div className="col">
-          <input type='text' placeholder='New Category' value={newCategory} onChange={(e) => setNewCategory(e.target.value)} />
+          <input type='text' data-testid='addCategoryInput' placeholder='New Category' value={newCategory} onChange={(e) => setNewCategory(e.target.value)} />
         </div>
         <div className="col">
           <button data-testid='addCategoryButton' onClick={addCategoryHandler} className="btn btn-primary">Add Category</button>

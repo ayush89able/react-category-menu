@@ -71,6 +71,11 @@ describe('Categories Component', () => {
         expect(component.firstChild).toMatchSnapshot();
     });
 
+    it('should have three categories initially', () => {
+        let cn = screen.getByTestId('categoriesNumber')
+        expect(cn).toBe(3);
+    });
+
     it('should dispatch an action on add sub category button click', () => {
         userEvent.click(screen.getByTestId('addSubCategoryOpenButton-0'))
         userEvent.click(screen.getByTestId('addSubCategoryButton-0'))
