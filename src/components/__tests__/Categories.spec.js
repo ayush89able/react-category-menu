@@ -5,6 +5,8 @@ import Categories from '../Categories'
 import { render, screen, fireEvent  } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { deleteCategory, addSubCategory, editCategoryFunction } from '../../redux/action'
+import catagories from '../../redux/reducer'
+import * as ActionTypes from '../../redux/actionTypes'
 import configureStore from 'redux-mock-store';
 
 const mockStore = configureStore([]);
@@ -106,21 +108,6 @@ describe('Categories Component', () => {
         userEvent.click(screen.getByTestId('expandAllButton'))
         expect(component.firstChild).toMatchSnapshot();
     });
-
-    // it('should decrease number of categories on delete event', () => {
-    //     userEvent.click(screen.getByTestId('deleteButton-0'))
-    //     let cn = screen.getByTestId('categoriesNumber')
-    //     expect(cn.innerHTML).toBe("2 Categories Present")       
-    // });
-
-    // it('should increase number of categories on add category event after 5000ms', () => {
-    //     let input = screen.getByTestId('addCategoryInput')
-    //     fireEvent.change(input, { target: { value: 'Acsss' } })
-    //     userEvent.click(screen.getByTestId('addCategoryButton'))
-    //     let cn = screen.getByTestId('categoriesNumber')
-    //     expect(cn).toBe("4 Categories Present");
-    // });
-
 })
 
 describe('Action Creators',()=>{
@@ -149,4 +136,37 @@ describe('Action Creators',()=>{
         }
         expect(editCategoryFunction({},0)).toEqual(expectedAction);
      })
+ })
+
+
+ describe('Testing Reducer',()=>{
+     let initialState = [{"id": 1, "subCategory": [{"id": 1, "subCategory": [], "value": "Trucks"}, {"id": 1, "subCategory": [], "value": "Cars"}], "value": "4 Wheelers"}, {"id": 2, "subCategory": [{"id": 1, "subCategory": [], "value": "Bikes"}], "value": "2 wheeleres"}, {"id": 3, "subCategory": [], "value": "Electronics"}]
+    it('should return the initial state', () => {
+        expect(catagories(undefined, {})).toEqual( [{"id": 1, "subCategory": [{"id": 1, "subCategory": [], "value": "Trucks"}, {"id": 1, "subCategory": [], "value": "Cars"}], "value": "4 Wheelers"}, {"id": 2, "subCategory": [{"id": 1, "subCategory": [], "value": "Bikes"}], "value": "2 wheeleres"}, {"id": 3, "subCategory": [], "value": "Electronics"}]);
+      });
+
+      it('should handle ADD_CATEGORY', () => {
+        const action = {
+          type: ActionTypes.ADD_CATEGORY,
+          payload: {id:4, value: 'Acs', subCategory:[]}
+        };
+        expect(catagories(initialState, action)).toEqual([{"id": 1, "subCategory": [{"id": 1, "subCategory": [], "value": "Trucks"}, {"id": 1, "subCategory": [], "value": "Cars"}], "value": "4 Wheelers"}, {"id": 2, "subCategory": [{"id": 1, "subCategory": [], "value": "Bikes"}], "value": "2 wheeleres"}, {"id": 3, "subCategory": [], "value": "Electronics"}, {"id": 4, "subCategory": [], "value": "Acs"}]);
+      });
+
+      it('should handle DELETE_CATEGORY', () => {
+        const action = {
+          type: ActionTypes.DELETE_CATEGORY,
+          payload: 0
+        };
+        expect(catagories(initialState, action)).toEqual([{"id": 2, "subCategory": [{"id": 1, "subCategory": [], "value": "Bikes"}], "value": "2 wheeleres"}, {"id": 3, "subCategory": [], "value": "Electronics"}])
+      });
+
+      it('should handle EDIT_CATEGORY', () => {
+        const action = {
+          type: ActionTypes.EDIT_CATEGORY,
+          payload: {id:1, value: 'Acs', subCategory:[]},
+          index: 0
+        };
+        expect(catagories(initialState, action)).toEqual([{"id": 1, "subCategory": [], "value": "Acs"}, {"id": 2, "subCategory": [{"id": 1, "subCategory": [], "value": "Bikes"}], "value": "2 wheeleres"}, {"id": 3, "subCategory": [], "value": "Electronics"}])
+      });
  })
